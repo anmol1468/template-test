@@ -6,7 +6,7 @@ async function getQuote() {
     const apiurl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
 
     try {
-        const response = await fetch(apiurl);
+        const response = await fetch(proxyurl + apiurl);
         const data = await response.json();
         console.log(data);
         
